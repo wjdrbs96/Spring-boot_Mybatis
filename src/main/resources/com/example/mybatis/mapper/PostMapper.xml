@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mybatis.mapper.PostMapper">
+
+    <!--id = 메소드 이름을 1 : 1 맵핑을 한다-->
+
+    <select id="findByPostId" resultType="Post">
+        select *
+        from post
+        where postId = #{postId};
+    </select>
+
+    <insert id="insertPost">
+        INSERT INTO post (memberId, title, content, count, createDateTime)
+        VALUES (#{memberId}, #{title}, #{content}, #{count}, #{createDateTime})
+    </insert>
+
+</mapper>

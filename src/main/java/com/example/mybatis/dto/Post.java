@@ -1,4 +1,4 @@
-package com.example.mybatis;
+package com.example.mybatis.dto;
 
 import java.util.Date;
 import java.util.StringJoiner;
@@ -9,7 +9,7 @@ public class Post {
     private String title;
     private String content;
     private int count;
-    private Date createDateTime;
+    private String createDateTime;
     private String name;
 
     public long getPostId() {
@@ -52,11 +52,11 @@ public class Post {
         this.count = count;
     }
 
-    public Date getCreateDateTime() {
+    public String getCreateDateTime() {
         return createDateTime;
     }
 
-    public void setCreateDateTime(Date createDateTime) {
+    public void setCreateDateTime(String createDateTime) {
         this.createDateTime = createDateTime;
     }
 
