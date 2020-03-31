@@ -24,7 +24,7 @@ public class StudentController {
     public String list(Model model) {
         List<Student> students = studentMapper.findAll();
         model.addAttribute("students", students);
-        return "student/list";
+        return "list";
     }
 
     @RequestMapping(value="create", method= RequestMethod.GET)
@@ -33,7 +33,7 @@ public class StudentController {
         List<Department> departments = departmentMapper.findAll();
         model.addAttribute("student", student);
         model.addAttribute("departments", departments);
-        return "student/edit";
+        return "edit";
     }
 
     @RequestMapping(value="create", method=RequestMethod.POST)
@@ -48,7 +48,7 @@ public class StudentController {
         List<Department> departments = departmentMapper.findAll();
         model.addAttribute("student", student);
         model.addAttribute("departments", departments);
-        return "student/edit";
+        return "edit";
     }
 
     @RequestMapping(value="edit", method=RequestMethod.POST)
