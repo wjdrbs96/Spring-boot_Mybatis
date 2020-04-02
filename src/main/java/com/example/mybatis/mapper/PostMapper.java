@@ -8,7 +8,6 @@ import org.apache.ibatis.annotations.Param;
 public interface PostMapper {
 
     Post findByPostId(@Param("postId") int postId);
-
     void insertPost(Post post);
 
 }

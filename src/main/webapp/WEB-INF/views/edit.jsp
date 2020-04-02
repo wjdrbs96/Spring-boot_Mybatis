@@ -55,7 +55,7 @@
         <div>
             <button type="submit" class="btn btn-primary">
                 <span class="glyphicon glyphicon-ok"></span> 저장</button>
-            <%--자바 코드를 쓰지 않고 HTML과 비슷한 JSTL로 자바 코드의 효과를 내기 위함--%>
+            <%--자바 코드를 쓰지 않고 HTML과 비슷한 느낌의 JSTL로 자바 코드의 효과를 내기 위함--%>
             <c:if test="${ student.id > 0 }">
                 <a href="delete?id=${ student.id }" class="btn btn-danger" data-confirm-delete>
                     <i class="glyphicon glyphicon-remove"></i> 삭제</a>
